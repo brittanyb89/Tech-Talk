@@ -1,23 +1,38 @@
 {
+  "root": true,
   "env": {
-    "node": true
-  },
-  "extends": ["xo", "prettier"],
-  "parser": "@babel/eslint-parser",
-  "parserOptions": {
-    "babelOptions": {
-      "plugins": ["@babel/plugin-syntax-import-assertions"]
-    },
-    "requireConfigFile": false,
-    "ecmaVersion": "latest",
-    "sourceType": "module"
+    "browser": true,
+    "commonjs": true,
+    "node": true,
+    "es6": true,
+    "es2017": true,
+    "es2018": true
   },
   "rules": {
-    "array-callback-return": "warn",
-    "capitalized-comments": "off",
-    "new-cap": "off",
-    "no-console": 1,
-    "padding-line-between-statements": "warn",
-    "no-unused-vars": "warn"
-  }
+    "no-undef-init": "error",
+    "no-duplicate-case": "error",
+    "no-empty": "error",
+    "no-extra-semi": "error",
+    "no-func-assign": "error",
+    "no-irregular-whitespace": "error",
+    "no-unreachable": "error",
+    "curly": "error",
+    "dot-notation": "error",
+    "eqeqeq": "error",
+    "no-empty-function": "error",
+    "no-multi-spaces": "error",
+    "no-mixed-spaces-and-tabs": "error",
+    "no-trailing-spaces": "error",
+    "default-case": "error",
+    "no-fallthrough": "error",
+    "no-unused-vars": "error",
+    "no-use-before-define": "error",
+    "no-redeclare": "error",
+    "brace-style": "error",
+    "indent": ["error", 2],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    "radix": "off"
+  },
+  "extends": ["prettier"]
 }
