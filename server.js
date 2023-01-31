@@ -25,15 +25,21 @@ const sess = {
   }),
 };
 
+// turn on sessions
 app.use(session(sess));
 
+// turn on routes
 app.use(express.json());
+app.use(routes);
+// turn on express to parse incoming data
 app.use(express.urlencoded({ extended: true }));
+// turn on static files
 app.use(express.static(path.join(__dirname, 'public')));
+// turn on handlebars
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
-app.use(routes);
 
+// turnt on connection to db and server
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
+  app.listen(PORT, () => console.log(`Now listening on port ${PORT}`));
 });
