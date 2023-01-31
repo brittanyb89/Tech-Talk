@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Tech Talk",
   "private": true,
-  "main": "server.js"
   "scripts": {
     "start": "node server.js",
     "watch": "nodemon server.js",
