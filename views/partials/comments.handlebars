@@ -1,0 +1,17 @@
+<div class="comments">
+  {{#each this}}
+  <section class="comment">
+    <div class="comment__header">
+      <div class="comment__header__avatar">
+        <img src="{{user.avatar}}" alt="avatar" />
+      </div>
+      <div class="comment__header__info">
+        <h3 class="comment__header__info__name">{{user.username}}</h3>
+        <p class="comment__header__info__date">{{format_date.date}}</p>
+      </div>
+    </div>
+    <div class="comment__body">
+      <p class="comment__body__text">{{comment.text}}</p>
+    </div>
+  </section>
+</div>
