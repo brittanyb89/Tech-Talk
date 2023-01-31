@@ -1,0 +1,71 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta http-equiv='X-UA-Compatible' content='ie=edge' />
+    <title>Tech Talk</title>
+    <link
+      rel='stylesheet'
+      href='https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css'
+    />
+    <link rel='stylesheet' href='/public/style.css' />
+    <script
+      defer
+      src='https://use.fontawesome.com/releases/v5.3.1/js/all.js'
+    ></script>
+  </head>
+  <div class='container'>
+    <div class='columns'>
+      <div class='column is-one-quarter'>
+        <h1 class='has-text-black px-3 py-3 has-text-weight-bold'>Let's Talk
+          About Tech</h1>
+        <navbar>
+          {{#if loggedIn}}
+            <p class='menu-label'>General</p>
+            <ul class='menu-list'>
+              <li><a href='/'>Home</a></li>
+              <li><a href='/about'>About</a></li>
+              <li><a href='/contact'>Contact</a></li>
+            </ul>
+            <p class='menu-label'>Admin</p>
+            <ul class='menu-list'>
+              <li><a href='/posts/add'>Add Post</a></li>
+            </ul>
+            <p class='menu-label'>Account</p>
+            <ul class='menu-list'>
+              <li><a href='/users/logout'>Logout</a></li>
+            </ul>
+          {{else}}
+            <h2 class='menu-label'>Hello!</h2>
+            <button id='login'>Login</button>
+            <p>New to Tech Talk? Create an account to login!</p>
+            <button id='signup'>Sign Up</button>
+          {{/if}}
+        </navbar>
+      </div>
+      <main>
+        {{{body}}}
+      </main>
+      <footer class='footer'>
+        <div class='content has-text-centered'>
+          <p>
+            <strong>Tech Talk</strong>
+            by
+            <a href='https://github.com/brittanyb89'>Brittany</a>| source code:
+            <a href='https://github.com/brittanyb89/Tech-Talk'><i
+                class='fab fa-github'
+              ></i></a>
+            |
+            <a href='mailto:b.jenez@icloud.com'><i
+                class='far fa-envelope'
+              ></i></a>
+            |The source code is MIT licensed
+          </p>
+        </div>
+      </footer>
+    </div>
+    {{#if loggedIn}}
+      <script src='/public/js/logout.js'></script>
+    {{/if}}
+  </div>
+</html>
