@@ -1,9 +1,14 @@
 {
+  "name": "tech-talk",
+  "version": "1.0.0",
+  "description": "Tech Talk",
   "private": true,
-  "main": "app/index.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
-    "test": "vitest"
+    "start": "node server.js",
+    "watch": "nodemon server.js",
+    "seed": "node seeds/index.js"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.19.1",
@@ -21,6 +26,7 @@
     "express-handlebars": "^6.0.7",
     "express-session": "^1.17.3",
     "mysql2": "^3.1.0",
-    "sequelize": "^6.28.0"
+    "sequelize": "^6.28.0",
+    "nodemon": "^2.0.4"
   }
 }
