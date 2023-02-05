@@ -1,28 +1,89 @@
-# Node Starter
+# Tech-Talk
 
-~~**Update:** A `pnpm-lock.yaml` file was added to the root of the project. If possible use `pnpm` over `npm`. You might like it better. See [the docs 📝](https://pnpm.io/motivation) if interested. If not, delete this file.~~
+![NPM](https://img.shields.io/npm/l/inquirer?style=plastic) ![badmath](https://img.shields.io/github/languages/top/lernantino/badmath) ![npm collaborators](https://img.shields.io/npm/collaborators/inquirer) ![Dependents (via libraries.io)](https://img.shields.io/librariesio/dependents/npm/inquirer) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
 
-## TLDR
+## Description
 
-Use of this starter template assumes that you have a 'complete dev environment' setup - a terminal, Node, VS Code, at least. If not, you may want to [start here.](https://www.notion.so/codefinity/Setting-up-a-Local-Dev-Environment-for-JS-02a4e9f4a30043d3a8e7d109be3448f4)
+This is a mysql database and CMS-style tech blog site where users can post, comment, and vote on posts. It's a full-stack application that uses the Model View Controller (MVC) paradigm, Handlebars.js, and ORM. It was built using MySQL2, Express, Sequelize, Handlebars, dotenv, and Bulma.
 
-1. Click that big green button to start using it.
-2. `clone` your new repo from your GitHub to your local computer
-3. `cd` into the `clone`d repo and enter: `npm i`.
-4. `npm start`
+Github Repo: http://github.com/brittanyb89/Tech-Talk
+Heroku Deployment:
 
-## Some of What's Included
+# User Story
+
+```
+AS A developer who writes about tech
+I WANT a CMS-style blog site
+SO THAT I can publish articles, blog posts, and my thoughts and opinions
+
+```
+# Acceptance Criteria
+
+```
+GIVEN a CMS-style blog site
+WHEN I visit the site for the first time
+THEN I am presented with the homepage, which includes existing blog posts if any have been posted; navigation links for the homepage and the dashboard; and the option to log in
+WHEN I click on the homepage option
+THEN I am taken to the homepage
+WHEN I click on any other links in the navigation
+THEN I am prompted to either sign up or sign in
+WHEN I choose to sign up
+THEN I am prompted to create a username and password
+WHEN I click on the sign-up button
+THEN my user credentials are saved and I am logged into the site
+WHEN I revisit the site at a later time and choose to sign in
+THEN I am prompted to enter my username and password
+WHEN I am signed in to the site
+THEN I see navigation links for the homepage, the dashboard, and the option to log out
+WHEN I click on the homepage option in the navigation
+THEN I am taken to the homepage and presented with existing blog posts that include the post title and the date created
+WHEN I click on an existing blog post
+THEN I am presented with the post title, contents, post creator’s username, and date created for that post and have the option to leave a comment
+WHEN I enter a comment and click on the submit button while signed in
+THEN the comment is saved and the post is updated to display the comment, the comment creator’s username, and the date created
+WHEN I click on the dashboard option in the navigation
+THEN I am taken to the dashboard and presented with any blog posts I have already created and the option to add a new blog post
+WHEN I click on the button to add a new blog post
+THEN I am prompted to enter both a title and contents for my blog post
+WHEN I click on the button to create a new blog post
+THEN the title and contents of my post are saved and I am taken back to an updated dashboard with my new blog post
+WHEN I click on one of my existing posts in the dashboard
+THEN I am able to delete or update my post and taken back to an updated dashboard
+WHEN I click on the logout option in the navigation
+THEN I am signed out of the site
+WHEN I am idle on the site for more than a set time
+THEN I am able to view comments but I am prompted to log in again before I can add, update, or delete comments
+
+```
+
+## Installation/Usage
+
+To install necessary dependencies, run the following command:
+
+```bash
+npm i
+```
+npm i express-handlebars mysql2 sequelize dotenv bcrypt connect-session-sequelize express-session
+
+
+## Mock-Up
 
 - [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 - Various VS Code 'settings' and 'extensions.' Look in the bottom right when you open this up in VS Code to install them.
 - [Vitest](https://vitest.dev/) for testing. Just do `npm test` or `npm t`.
 
-## How To Use
+## License
 
-Run `npm i` to get all the things installed.
+![NPM](https://img.shields.io/npm/l/inquirer?style=plastic)
 
-`npm start` will watch the `app` directory for any changes using `nodemon`
+MIT License
 
-## Other Notes
+Copyright (c) 2022 Brittany Burton
 
-To use the new experimental `fetch` that's now in Node, just add: `/* global fetch */` to the top of your file. This will appease ESLint.
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+```
