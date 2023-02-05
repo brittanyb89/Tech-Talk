@@ -15,12 +15,9 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    post_url: {
+    post_content: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        isURL: true,
-      },
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -28,6 +25,16 @@ Post.init(
         model: 'user',
         key: 'id',
       },
+    },
+    created_at: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    },
+    updated_at: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
     },
   },
   {
