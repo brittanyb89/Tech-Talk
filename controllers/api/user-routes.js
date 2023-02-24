@@ -2,6 +2,8 @@ const router = require('express').Router();
 const { User, Post, Comment } = require('../../models');
 // const withAuth = require('../../utils/auth');
 
+// endpoint: /api/users
+
 router.get('/', (req, res) => {
   User.findAll({
     attributes: { exclude: ['password'] },
@@ -51,6 +53,7 @@ router.post('/', (req, res) => {
   User.create({
     username: req.body.username,
     password: req.body.password,
+    email: req.body.email,
   })
     .then((dbUserData) => {
       req.session.save(() => {
@@ -71,6 +74,7 @@ router.post('/login', (req, res) => {
   User.findOne({
     where: {
       username: req.body.username,
+      password: req.body.password,
     },
   }).then((dbUserData) => {
     if (!dbUserData) {
@@ -95,6 +99,7 @@ router.post('/login', (req, res) => {
   });
 });
 
+// endpoint: /api/users/logout
 router.post('/logout', (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
