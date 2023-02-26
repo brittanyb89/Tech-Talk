@@ -16,8 +16,8 @@
   </head>
   <div class='wrapper'>
     <div class='column is-one-quarter'>
-      <h1 class='has-text-black px-3 py-3 has-text-weight-bold'>Let's Talk
-        About Tech</h1>
+      <h1 class='has-text-black px-3 py-3 has-text-weight-bold'>Welcome! Let's Talk
+        About Tech!</h1>
       <navbar>
         {{#if loggedIn}}
           <p class='menu-label'>General</p>
@@ -35,7 +35,8 @@
             <li><a id='logout' href='#'>Logout</a></li>
           </ul>
         {{else}}
-          <h2 class='menu-label'><a href='/homepage'>Homepage</a></h2>
+          <h2 class='menu-label'><a href='/'>Homepage</a></h2>
+          <h2 class="menu-label"><a href='/dashboard'>Dashboard</a></h2>
           <button id='login'><a href='/login'>Login</a></button>
           <p>New to Tech Talk? Create an account to login!</p>
           <button id='signup'><a href='/signup'>Sign Up</a></button>
