@@ -7,7 +7,7 @@
 This is a mysql database and CMS-style tech blog site where users can post, comment, and vote on posts. It's a full-stack application that uses the Model View Controller (MVC) paradigm, Handlebars.js, and ORM. It was built using MySQL2, Express, Sequelize, Handlebars, dotenv, and Bulma.
 
 Github Repo: http://github.com/brittanyb89/Tech-Talk
-Heroku Deployment:
+Heroku Deployment: https://tech-talk2.herokuapp.com/
 
 # User Story
 
