@@ -1,4 +1,3 @@
-// form handler to login
 async function loginFormHandler(event) {
   event.preventDefault();
 
@@ -18,11 +17,11 @@ async function loginFormHandler(event) {
     if (response.ok) {
       document.location.replace('/dashboard');
     } else {
-      alert(response.statusText);
+      alert('Login failed. Please try again.');
     }
   }
 }
 
 document
-  .querySelector('#login-form')
+  .querySelector('.login-form')
   .addEventListener('submit', loginFormHandler);
